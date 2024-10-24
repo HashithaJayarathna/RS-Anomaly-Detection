@@ -1,0 +1,128 @@
+@keyframes fadeInFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(0);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0); /* End position: normal position */
+    }
+}
+
+@keyframes fadeInFromSides {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0); /* End position: normal position */
+    }
+}
+
+.landing-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 95vh; /* Ensures the background covers the full viewport height */
+    background: linear-gradient(to bottom, lightblue, rgb(189, 130, 238)); 
+    background-size: cover; /* Ensures the gradient adjusts to fill the entire space */
+    background-position: center;
+}
+.background{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 20px;
+    min-height: 89vh;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+    margin-bottom: 30px;
+}
+
+.welcome{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    margin-left: 1px;
+    font-size: 28px;
+    font-weight: 700;
+    background: none;
+    margin-top: 0px;
+    margin-bottom: 40px;
+    color: rgb(98, 40, 153);
+    animation: fadeInFromRight 0.5s ease-in-out;
+}
+
+.image{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    object-fit: cover;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 240px;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeInFromRight 0.9s ease-in-out;
+}
+
+.description{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    width: 60%;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 17px;
+    font-weight: 500;
+    background: rgb(255, 255, 255);
+    animation: fadeInFromRight 2s ease-in-out;
+}
+
+.button-container {
+    display: flex;
+    gap: 30px; /* equivalent to space-x-4 */
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    animation: fadeInFromRight 1.5s ease-in-out;
+  }
+  
+  /* Shared button styles */
+  .btn {
+    padding: 0.8rem 2rem;  /* equivalent to py-2 px-4 */
+    color: white;
+    border-radius: 0.25rem; /* equivalent to rounded */
+    cursor: pointer;
+    border: none;
+    min-width: 150px;
+  }
+  
+  /* Purple button */
+  .btn-purple {
+    background-color: #6b46c1; /* equivalent to bg-purple-600 */
+  }
+  
+  .hover-purple:hover {
+    background-color: #553c9a; /* equivalent to hover:bg-purple-700 */
+  }
+  
+  /* Red button */
+  .btn-red {
+    background-color: #e53e3e; /* equivalent to bg-red-600 */
+  }
+  
+  .hover-red:hover {
+    background-color: #c53030; /* equivalent to hover:bg-red-700 */
+  }
