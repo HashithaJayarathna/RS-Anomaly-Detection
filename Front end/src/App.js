@@ -3,11 +3,13 @@ import "./App.css";
 import Signup from "./Components/Signup/Signup";
 import Login from "./Components/Login/Login";
 import LandingPage from "./Components/LandingPage/LandingPage";
-import HomePage from "./Components/HomePage";
+//import HomePage from "./Components/HomePage";
+import Header from "./Components/Header";
 import Form from "./Components/Form";
 import About from "./Components/About";
 import Contact from "./Components/Contact";
-import Header from "./Components/Header";
+import ProtectedRoute from "./Components/ProtectedRoute"; // Import ProtectedRoute
+import HomePage2 from "./Components/HomePage/HomePage";
 
 function App() {
   return (
@@ -15,16 +17,30 @@ function App() {
       <Router>
         <Header />
         <Routes>
-          {/* Public Routes */}
-          <Route path="/" element={<LandingPage />} />
+          <Route index element={<LandingPage />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
 
-          {/* Restricted Routes */}
-          <Route path="/home" element={<HomePage />} />
-          <Route path="/form" element={<Form />} />
+          {/* Protect the /Home and /Form routes */}
+          <Route
+            path="/Home"
+            element={
+              <ProtectedRoute>
+                <HomePage2 />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/Form"
+            element={
+              <ProtectedRoute>
+                <Form />
+              </ProtectedRoute>
+            }
+          />
+
+          <Route path="/About" element={<About />} />
+          <Route path="/Contact" element={<Contact />} />
         </Routes>
       </Router>
     </div>
