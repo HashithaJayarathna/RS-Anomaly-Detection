@@ -3,7 +3,6 @@ import "./App.css";
 import Signup from "./Components/Signup/Signup";
 import Login from "./Components/Login/Login";
 import LandingPage from "./Components/LandingPage/LandingPage";
-//import HomePage from "./Components/HomePage";
 import Header from "./Components/Header";
 import Form from "./Components/Form";
 import About from "./Components/About";
@@ -48,3 +47,4 @@ function App() {
 }
 
 export default App;
+
