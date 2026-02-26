@@ -7,7 +7,7 @@ import Header from "./Components/Header";
 import Form from "./Components/Form";
 import About from "./Components/About";
 import Contact from "./Components/Contact";
-import ProtectedRoute from "./Components/ProtectedRoute"; // Import ProtectedRoute
+import ProtectedRoute from "./Components/ProtectedRoute";
 import HomePage2 from "./Components/HomePage/HomePage";
 
 function App() {
@@ -47,4 +47,5 @@ function App() {
 }
 
 export default App;
+
 
