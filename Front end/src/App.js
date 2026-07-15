@@ -1,5 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
+import ProtectedRoute from "./Components/ProtectedRoute";
+import HomePage2 from "./Components/HomePage/HomePage";
 import Signup from "./Components/Signup/Signup";
 import Login from "./Components/Login/Login";
 import LandingPage from "./Components/LandingPage/LandingPage";
@@ -7,8 +9,7 @@ import Header from "./Components/Header";
 import Form from "./Components/Form";
 import About from "./Components/About";
 import Contact from "./Components/Contact";
-import ProtectedRoute from "./Components/ProtectedRoute";
-import HomePage2 from "./Components/HomePage/HomePage";
+
 
 function App() {
   return (
